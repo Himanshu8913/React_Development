@@ -16,6 +16,7 @@ const HeadingComponent = () => {
     return (
     <div>
         <Title />
+        {Title()}
         <h1 id="heading">This is h1 tag in functional component.</h1>
     </div>
     );
