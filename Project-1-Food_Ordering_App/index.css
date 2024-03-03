@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 2rem;
+}
+
+.nav-items > ul {
+    display: flex;
+    margin-right: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
