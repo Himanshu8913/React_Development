@@ -8,6 +8,11 @@
     - Search
     - RestaurantContainer
     - RestaurantCard
+      - Img
+      - Name of restaurant
+      - Rating
+      - Cuisines
+      - Delivery Time
  - Footer
     - Copyright
     - Links
