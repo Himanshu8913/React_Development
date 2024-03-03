@@ -21,13 +21,14 @@ const Header = () => {
 }
 
 const RestaurantCard = (props) => {  // props = {resName, cuisines, rating, deliveryTime} => destructuring
+    const {resName, cuisines, rating, deliveryTime} = props;
     return (
         <div className="res-card">
             <img className="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/f01666ac73626461d7455d9c24005cd4" />
-            <h3>{props.resName}</h3>
-            <h4>{props.cuisines}</h4>
-            <h4>{props.rating} star</h4>
-            <h4>{props.deliveryTime} min</h4>
+            <h3>{resName}</h3>
+            <h4>{cuisines}</h4>
+            <h4>{rating} stars</h4>
+            <h4>{deliveryTime} min</h4>
         </div>
     )
 }
