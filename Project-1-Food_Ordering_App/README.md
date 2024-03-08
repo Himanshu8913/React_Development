@@ -1,6 +1,5 @@
 # Food Ordering App Project
 
-
  - Header
     - Logo
     - Nav Items
@@ -18,3 +17,13 @@
     - Links
     - Adddress
     - Contact
+
+## React Hooks -> Normal JS utility functions
+
+- useState() - State variables in react
+- useEffect
+
+## Types of Routing in web app
+
+- Client Side Routing
+- Server Side Routing
