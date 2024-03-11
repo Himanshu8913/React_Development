@@ -13,11 +13,11 @@ const Body = () => {
     }, [])
 
     const fetchData = async () => {
-        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.234249&lng=77.440926&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.234249&lng=77.440926&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
-        // console.log(json.data.cards[2].card.card);
-        setListOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // console.log(json.data.cards[4].card.card);
+        setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
     // Conditional Rendering
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
@@ -31,7 +31,7 @@ const Body = () => {
                     } />
                     <button onClick={
                         () => {
-                            console.log(searchText);
+                            // console.log(searchText);
 
                             const filteredRestaurant = listOfRestaurants.filter(
                                 (res) => 
@@ -56,7 +56,8 @@ const Body = () => {
             </div>
 
             <div className="res-container">
-                {filteredRestaurant.map((restaurant) => (
+                {/* {console.log(filteredRestaurant)} */}
+                {filteredRestaurant && filteredRestaurant.map((restaurant) => (
                     <RestaurantCard key={restaurant.info.id} resData={restaurant} />
                 ))}
             </div>
