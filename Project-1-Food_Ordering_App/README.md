@@ -42,3 +42,7 @@
    - child2 componentDidMount()
 
 - parent componentDidMount() -> used for api calls
+
+# References
+### Components Lifecycle
+- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
