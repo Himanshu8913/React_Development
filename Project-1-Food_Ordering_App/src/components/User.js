@@ -8,35 +8,35 @@ class User extends React.Component {
         super(props);
 
         this.state = {
-            count: 0,
+            userInfo: {
+                name: "Test",
+                location: "Default",
+            },
         }
-        console.log(this.props.name + " Child Constructor")
+        // console.log(this.props.name + " Child Constructor")
     }
 
-    componentDidMount() {
-        console.log(this.props.name + " Child Component did mount")
+    async componentDidMount() {
+        // API call -> Similar like useEffect()
+        const data = await fetch("https://api.github.com/users/Himanshu8913");
+        const json = await data.json();
+
+        this.setState({
+            userInfo: json
+        });
+        console.log(json);
     }
 
     render() {
-
-        console.log(this.props.name + " Child Render")
-
-        const { name, location, contact } = this.props;
-        const { count} = this.state;
+        const { avatar_url, name, location, login } = this.state.userInfo;
+        // const { name, location, contact } = this.props;
 
         return (
             <div className="user-card">
-                <h2>Count: {count}</h2>
-                <button onClick={() => {
-                    this.setState({
-                        count: this.state.count + 1,
-                    })
-                }}>
-                    Count Increase
-                </button>
+                <img src={avatar_url} />
                 <h2>Name: {name}</h2>
-                <h4>Location: {location}</h4>
-                <h4>Contact: {contact}</h4>
+                <h4>Location: {location === null ? "Please update the location" : location}</h4>
+                <h4>Contact: {login}</h4>
             </div>
         )
     }

@@ -9,19 +9,18 @@ class About extends Component {
     }
 
     componentDidMount() {
-        console.log("Parent Component Did Mount");
+        // console.log("Parent Component Did Mount");
         // API call -> Similar like useEffect()
     }
 
     render() {
-        console.log("Parent Render");
+        // console.log("Parent Render");
 
         return (
             <div>
                 <h1>About Class Component</h1>
                 <h2>This is about page...</h2>
                 <User name={"Himanshu Gupta"} location={"Pune, Maharastra"} contact="@Himanshu8913"/>
-                <User name={"Test User"} location={"Pune, Maharastra"} contact="@Test"/>
 
             </div>
         );

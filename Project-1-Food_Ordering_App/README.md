@@ -38,6 +38,7 @@
    - child2 constructor()
    - child2 render()
 
+< DOM UPDATED IN SINGLE BATCH >
    - child1 componentDidMount()
    - child2 componentDidMount()
 
@@ -46,3 +47,12 @@
 # References
 ### Components Lifecycle
 - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+   ### Mounting
+   - Constructor()
+   - Render()
+   - componentDidMount()
+   ### Update
+   - setState()
+   - componentDidUpdate()
+   ### Unmounting
+   - componentWillUnmount()
