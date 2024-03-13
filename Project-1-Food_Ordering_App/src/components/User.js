@@ -9,23 +9,27 @@ class User extends React.Component {
 
         this.state = {
             count: 0,
-            count2: 0,
         }
-        // console.log(props);
+        console.log(this.props.name + " Child Constructor")
     }
+
+    componentDidMount() {
+        console.log(this.props.name + " Child Component did mount")
+    }
+
     render() {
 
+        console.log(this.props.name + " Child Render")
+
         const { name, location, contact } = this.props;
-        const { count, count2 } = this.state;
+        const { count} = this.state;
 
         return (
             <div className="user-card">
                 <h2>Count: {count}</h2>
-                <h2>Count2: {count2}</h2>
                 <button onClick={() => {
                     this.setState({
                         count: this.state.count + 1,
-                        count2: this.state.count2 + 2,
                     })
                 }}>
                     Count Increase

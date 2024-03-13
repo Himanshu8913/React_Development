@@ -27,3 +27,18 @@
 
 - Client Side Routing
 - Server Side Routing
+
+## Class Based Component -> calling 
+- parent constructore()
+- parent render()
+
+   - child1 constructor()
+   - child1 render()
+
+   - child2 constructor()
+   - child2 render()
+
+   - child1 componentDidMount()
+   - child2 componentDidMount()
+
+- parent componentDidMount() -> used for api calls
