@@ -56,3 +56,12 @@
    - componentDidUpdate()
    ### Unmounting
    - componentWillUnmount()
+
+## Breaking the application into smaller bundles
+
+- Chunking
+- Code Splitting
+- Dynamic Bundling
+- lazy Loading
+- on demand loading
+- dynamix imoprt
