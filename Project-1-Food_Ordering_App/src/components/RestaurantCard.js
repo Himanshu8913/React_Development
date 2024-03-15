@@ -12,13 +12,13 @@ export const RestaurantCard = (props) => {  // props = {resName, cuisines, ratin
     } = resData?.info;
     const { deliveryTime } = resData?.info?.sla;
     return (
-        <div className="res-card">
-            <img className="res-logo" src={ CDN_URL + cloudinaryImageId } />
-            <h3>{name}</h3>
-            <h4>{(cuisines).join(", ")}</h4>
-            <h4>{avgRatingString} stars</h4>
-            <h4>{costForTwo}</h4>
-            <h4>{deliveryTime} min</h4>
+        <div className="m-4 p-4 w-[250px] h-[480px] rounded-lg bg-[#f0f0f0]">
+            <img className="rounded-lg" src={ CDN_URL + cloudinaryImageId } />
+            <h3 className="font-bold py-4 text-lg">{name}</h3>
+            <h4 className="text-sm">{(cuisines).join(", ")}</h4>
+            <h4 className="text-sm">⭐ {avgRatingString}</h4>
+            <h4 className="text-sm">{costForTwo}</h4>
+            <h4 className="text-sm">⏰ {deliveryTime} min</h4>
         </div>
     )
 }
