@@ -24,48 +24,53 @@ const Body = () => {
 
     const onlineStatus = useOnlineStatus();
 
-    if (onlineStatus === false){
+    if (onlineStatus === false) {
         return (
             <h1>
                 Looks like you're offline!! Please check your internet connection;
             </h1>
         );
     }
-        
+
     // Conditional Rendering
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
-            <div className="filter">
-                <div className="search">
-                    <input type="text" className="search-box" value={searchText} onChange={
+            <div className="filter flex">
+                <div className="search m-2 p-0">
+                    <input type="text" className="border border-solid border-black" value={searchText} onChange={
                         (e) => {
                             setSearchText(e.target.value);
                         }
                     } />
-                    <button onClick={
-                        () => {
-                            // console.log(searchText);
+                    <button className="px-4 py-2 bg-green-100 m-4 rounded-lg"
+                        onClick={
+                            () => {
+                                // console.log(searchText);
 
-                            const filteredRestaurant = listOfRestaurants.filter(
-                                (res) =>
-                                    res.info.name.toLowerCase().includes(searchText.toLocaleLowerCase())
-                                // console.log(res.info.name.includes(searchText))
-                            );
-                            setFilteredRestaurant(filteredRestaurant);
-                        }
-                    }>
+                                const filteredRestaurant = listOfRestaurants.filter(
+                                    (res) =>
+                                        res.info.name.toLowerCase().includes(searchText.toLocaleLowerCase())
+                                    // console.log(res.info.name.includes(searchText))
+                                );
+                                setFilteredRestaurant(filteredRestaurant);
+                            }
+                        }>
                         Search
                     </button>
                 </div>
-                <button className="filter-btn" onClick={() => {
-                    const filteredList = listOfRestaurants.filter(
-                        (res) => res.info.avgRating > 4.1
-                    );
-                    console.log(filteredList)
-                    setFilteredRestaurant(filteredList);
-                }}>
-                    Top Rated Restaurant
-                </button>
+
+                <div className="search m-2 p-0 flex items-center">
+                    <button className="px-4 py-2 bg-gray-100 m-4 rounded-lg" onClick={() => {
+                        const filteredList = listOfRestaurants.filter(
+                            (res) => res.info.avgRating > 4.1
+                        );
+                        console.log(filteredList)
+                        setFilteredRestaurant(filteredList);
+                    }}>
+                        Top Rated Restaurant
+                    </button>
+                </div>
+
             </div>
 
             <div className="res-container">

@@ -64,7 +64,7 @@
 - Dynamic Bundling
 - lazy Loading
 - on demand loading
-- dynamix imoprt
+- dynamix import
 
 ## PostCSS
 - To transform css into js, Bundler(Parcel) use postcssrc to understand tailwind.
