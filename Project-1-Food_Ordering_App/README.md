@@ -65,3 +65,6 @@
 - lazy Loading
 - on demand loading
 - dynamix imoprt
+
+## PostCSS
+- To transform css into js, Bundler(Parcel) use postcssrc to understand tailwind.
