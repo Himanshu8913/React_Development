@@ -22,3 +22,17 @@ export const RestaurantCard = (props) => {  // props = {resName, cuisines, ratin
         </div>
     )
 }
+
+// Higher Order Component
+// input - RestaurantCard =>> RestaurantCardPromoted
+
+export const withPromotedLabel = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div>
+                <label className="absolute text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-indigo-600 bg-indigo-200 uppercase last:mr-0 m-2">Promoted</label>
+                <RestaurantCard {...props}/>
+            </div>
+        );
+    };
+};
