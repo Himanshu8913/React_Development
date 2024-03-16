@@ -12,7 +12,7 @@ export const RestaurantCard = (props) => {  // props = {resName, cuisines, ratin
     } = resData?.info;
     const { deliveryTime } = resData?.info?.sla;
     return (
-        <div className="m-4 p-4 w-[250px] h-[480px] rounded-lg bg-[#f0f0f0]">
+        <div className="m-4 p-4 w-[250px] h-[480px] rounded-lg bg-gray-100 hover:bg-gray-200">
             <img className="rounded-lg" src={ CDN_URL + cloudinaryImageId } />
             <h3 className="font-bold py-4 text-lg">{name}</h3>
             <h4 className="text-sm">{(cuisines).join(", ")}</h4>
