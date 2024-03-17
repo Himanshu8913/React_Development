@@ -1,8 +1,9 @@
 import { RestaurantCard, withPromotedLabel } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
@@ -33,6 +34,8 @@ const Body = () => {
             </h1>
         );
     }
+
+    const { loggedInUser, setUserName } = useContext(UserContext);
 
     // Conditional Rendering
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
@@ -71,6 +74,15 @@ const Body = () => {
                     }}>
                         Top Rated Restaurant
                     </button>
+                </div>
+
+                <div className="search m-2 p-0 flex items-center">
+                    <label>UserName : </label>
+                    <input
+                        className="border border-black p-2 "
+                        value={loggedInUser}
+                        onChange={(e) => setUserName(e.target.value)}
+                    />
                 </div>
 
             </div>
