@@ -68,3 +68,6 @@
 
 ## PostCSS
 - To transform css into js, Bundler(Parcel) use postcssrc to understand tailwind.
+
+
+// cors-anywhere.herokuapp.com
