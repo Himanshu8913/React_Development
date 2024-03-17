@@ -17,7 +17,7 @@ const Body = () => {
     }, [])
 
     const fetchData = async () => {
-        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.234249&lng=77.440926&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         // console.log(json.data.cards[4].card.card);
         setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -64,7 +64,7 @@ const Body = () => {
                 <div className="search m-2 p-0 flex items-center">
                     <button className="px-4 py-2 bg-gray-100 m-4 rounded-lg" onClick={() => {
                         const filteredList = listOfRestaurants.filter(
-                            (res) => res.info.avgRating > 4.1
+                            (res) => res.info.avgRating > 4.5
                         );
                         console.log(filteredList)
                         setFilteredRestaurant(filteredList);
@@ -75,7 +75,7 @@ const Body = () => {
 
             </div>
 
-            <div className="flex flex-wrap justify-between">
+            <div className="flex flex-wrap justify-start">
                 {/* {console.log(filteredRestaurant)} */}
                 {filteredRestaurant && filteredRestaurant.map((restaurant) => (
                     <Link key={restaurant.info.id} to={"/restaurant/" + restaurant?.info.id} >
