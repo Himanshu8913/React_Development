@@ -69,5 +69,14 @@
 ## PostCSS
 - To transform css into js, Bundler(Parcel) use postcssrc to understand tailwind.
 
+# To fix CORS Issue without chrome extension
+- https://cors-anywhere.herokuapp.com/
 
-// cors-anywhere.herokuapp.com
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect our store to the app
+- Slice (cartSlice)
+- dispatch(action)[to write data]
+- reducer
+- Selector[to read data - subscribing to the store] - useSelector hook
