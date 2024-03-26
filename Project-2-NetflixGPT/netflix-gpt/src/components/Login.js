@@ -13,9 +13,7 @@ const Login = () => {
 
     // To validate form data
     const handleButtonClick = () => {
-        // console.log(email, password);
         const message = checkValidData(email.current.value, password.current.value);
-        // console.log(message);
         setErrorMessage(message);
     }
 
@@ -44,29 +42,29 @@ const Login = () => {
                         ref={name}
                         type="text"
                         placeholder="Full Name"
-                        className="p-4 my-4 w-full bg-gray-700"
+                        className="p-4 my-4 w-full h-10 bg-gray-700"
                     />
                 )}
                 <input
                     ref={email}
                     type="email"
                     placeholder="Email Address"
-                    className="p-4 my-4 w-full bg-gray-700"
+                    className="p-4 my-4 w-full h-10 bg-gray-700"
                 />
                 <input
                     ref={password}
                     type="password"
                     placeholder="Password"
-                    className="p-4 my-4 w-full bg-gray-700"
+                    className="p-4 my-4 w-full h-10 bg-gray-700"
                 />
-                <p className="text-red-500 font-bold text-lg py-2">{errorMessage}</p>
+                <p className="text-red-500 font-bold text-lg py-2 h-8">{errorMessage}</p>
                 <button
-                    className="p-4 my-6 bg-red-700 w-full rounded-lg"
+                    className="p-4 bg-red-700 w-full rounded-lg"
                     onClick={handleButtonClick}
                 >
                     {isSignInForm ? "Sign In" : "Sign Up"}
                 </button>
-                <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
+                <p className="py-4 my-2 cursor-pointer" onClick={toggleSignInForm}>
                     {isSignInForm
                         ? "New to Netflix? Sign Up Now"
                         : "Already registered? Sign In Now."}
