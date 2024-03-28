@@ -33,6 +33,9 @@
 - npm install firebase
 - copy the configuration and paste in `firebase.js` file.
 - npm install -g firebase-tools
+- Go To Firebase > Project Overview > Build > Authentication
+- Get Started > sign-in method > Email/Password > Enable
 - firebase login
 - firebase init
 - firebase deploy
+    - https://netflixgpt-fc8b1.web.app
