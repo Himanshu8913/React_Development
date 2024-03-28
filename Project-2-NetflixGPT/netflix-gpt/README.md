@@ -8,6 +8,8 @@
 - Sign up Form
 - Form Validation
 - useRef Hook
+- Firebase Setup
+- Deploying our app to production
 
 ## Features
 - Login/Sign Up
@@ -23,3 +25,14 @@
 - NetflixGPT
     - Search Bar
     - Movie Suggestions
+
+## Firebase Setup
+- Go to firebase.com > Get Started > New Project > Create Project
+- Once done click on web icon (</>)
+- Register app and enable Hosting
+- npm install firebase
+- copy the configuration and paste in `firebase.js` file.
+- npm install -g firebase-tools
+- firebase login
+- firebase init
+- firebase deploy
